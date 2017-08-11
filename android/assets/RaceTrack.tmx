@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" nextobjectid="21">
+ <tileset firstgid="1" source="RaceTrack.tsx"/>
+ <tileset firstgid="3905" source="Grass.tsx"/>
+ <tileset firstgid="4074" source="PlayerCar.tsx"/>
+ <layer name="Tile Layer 1" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt0rczg2EAx/EniROJDPqgLdqCKIsSwawzaH+BPqnBrDNo/4K26GVWZt2gLdqil43vXThHEuWVC+fe390n0/u+37zvPUL83fVphejHwCdWNUKsYR0b2MQWtrGj+XnfWfFKDRcr3LjOHR7whBe84aP9fvfRmR+1EAoooYKT2vq1aTw/HRnIRBaykYNc5EnoG2glwYhkpCDVRr+F57eiDe3oQCe60I0eCf16Wg0woRFNaLbRX+T5S1jGCnq1b8/NoIT+NK0ZzGIO81iw0X+/Xiv/4bu7pnWDW9zhHg9f7O9y3vewjwMcSjj/P+n78r5+8EcAAh38/vn0ClCIIhQ7uG+P8yf3f7f/sjhXIeKRgEQYkASjq2P61XRqUIs61KMBpue+XilEFKIRg1godJakbpzOBCYxhWnMYPaD9zfqLEndOZ0LXOIK17jBLYaUZsMYwSjGYNJZkrpw7o1AJPSIQjRicKQ0O8YJTnFm5+9fwr2lKEM5KlCJKgSpzIIRglCEqez7/eXJkydP3v/dE792lCE=
+  </data>
+ </layer>
+ <layer name="Rough" width="32" height="32">
+  <properties>
+   <property name="negateSpeed" type="int" value="50"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJy9l0tuwzAMRHMDn8lpvE3qbN0mW7fpNv3cviwgAoMBf3bdCngIIkEai6REqu92u73Qt98H4SDci7wLH8Jn0I9rs47+Pwon4VEY29hWDTVZR8cm4Ul4Fi5t7C/0WUfHZuFFeBVurQ+b2ghhW1b0WUfH7u1XfWbpT0TVZ6jvxQb3W/ozUfXZVvoc+2zLy0r9vqhvnVGcc1upf1ypb83L9HmvPcQT+rKib83L9Pmbe4in7PyxvjXP01cmQ9+6M73zj+fNmmc1vDNmRx/X8OzPtq7aH+8M/mZL37M/27pqf7wzquffusu8fJfZP8qZ6FP2r9X2XUw0R+N26Oy8V/ElrncgBmfOifZ17uy8V/HlmsZ7x/1Hd+NWjfd+/md99Om1obEW6bN/1zCQT98aGmuR/piA/ozANb8aGmtRbZbxG7voXqPaLCOzT4XI/hkVG2Us3f9SG2Us3f9SG2X0BbB2ivq8eRpzVq7lN4WFrod9mLM88N4bO7te5DeFha6HfZizPPgsc+31o89vCgtdD/swZ3lwnFr1R+WNjbUL1xDVt7lXr3wD+tpWQg==
+  </data>
+ </layer>
+ <objectgroup name="Player">
+  <object id="19" name="Start" type="Object" x="238.683" y="250.928" width="62.3163" height="84.6561"/>
+  <object id="20" x="318.636" y="-23.5156" height="1.17578" visible="0"/>
+ </objectgroup>
+</map>

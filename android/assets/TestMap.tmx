@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" source="NewTown.tsx"/>
+ <layer name="Tile Layer 1" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztk90NQGAMRf1MgAkwASbABJgAE3zsn7iPjZAm1SYeepKT3vT9RJHjOHdimMBUsDXIYA4LwdaghBWsBVuDBrawE2wNejjAUbA1mOAMF8HWYIUb3AX7K7QlrjWL/mhLXGsW/dGWuNYs+qMtca1Z9Edb4lqz6I+2xLVm0R9tiWvNor8AD3iSG172089xHMf5PxdBrzGT
+  </data>
+ </layer>
+</map>
