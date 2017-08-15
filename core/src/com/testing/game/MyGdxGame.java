@@ -17,7 +17,7 @@ import com.testing.game.Racer;
 import com.testing.game.Player;
 
 
-public class MyGdxGame extends ApplicationAdapter {
+public class MyGdxGame extends ApplicationAdapter{
 	SpriteBatch batch;
 	Texture img;
 	TiledMap tiledMap;
@@ -34,8 +34,8 @@ public class MyGdxGame extends ApplicationAdapter {
 		camera.update();
 		tiledMap = new TmxMapLoader().load("RaceTrack.tmx");
 		tiledMapRenderer = new OrthogonalTiledMapRenderer(tiledMap);
-		player = new Player(tiledMap);
 		spriteBatch = new SpriteBatch();
+		player = new Player(tiledMap,spriteBatch);
 		//spriteBatch.draw(player.racer.texture, 500,500);
 		Gdx.input.setInputProcessor(player);
 	}

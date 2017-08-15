@@ -14,6 +14,7 @@ public class Racer {
     float maxSpeed;
     float width;
     float height;
+    Object position;
     Texture texture;
     Sprite sprite;
 
@@ -40,7 +41,7 @@ public class Racer {
     }
 
     public Sprite setSprite(Texture newTexture){
-        sprite = new Sprite(newTexture,20,20,50,50);
+        sprite = new Sprite(newTexture,-200,100,60,60);
         return sprite;
     }
 

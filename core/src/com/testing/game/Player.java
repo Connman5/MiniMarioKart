@@ -12,28 +12,47 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyAdapter;
 import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.MapLayer;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.MapObjects;
+import com.testing.game.MyGdxGame;
+import com.testing.position.Position;
 public class Player extends Racer implements InputProcessor{
     Racer racer;
-    Object position;
+    Object mapPosition;
     MapLayer mapProperties;
     MapObjects mapObject;
-    Player(TiledMap tiledMap){
+    MyGdxGame myGdxGame;
+    SpriteBatch spriteBatch;
+    Position position;
+    int timer = 0;
+    Player(TiledMap tiledMap, SpriteBatch spriteBatch){
         this.racer = new Racer();
+        this.position = new Position();
         this.racer.texture = this.racer.setTexture("car_blue_1.png");
         this.racer.sprite = this.racer.setSprite(this.racer.texture);
         mapProperties = tiledMap.getLayers().get("Player");
         mapObject = mapProperties.getObjects();
-        this.position = mapObject.get("Start");
+        this.mapPosition = mapObject.get("Start");
+        this.spriteBatch = spriteBatch;
     }
 
 
     @Override
     public boolean keyDown(int keycode) {
-        System.out.println(this.position);
+        if(timer == 50){
+            if(!racer.checkMaxSpeed()) {
+                this.racer.speed += 1;
+            }
+            timer = 0;
+        }
+        else{
+            timer += 1;
+        }
+        System.out.println(this.mapPosition);
         System.out.println("Key Typed : " + keycode);
+        reRender();
         return true;
     }
 
@@ -66,6 +85,14 @@ public class Player extends Racer implements InputProcessor{
     @Override
     public boolean scrolled(int amount) {
         return false;
+    }
+
+    //TODO bad place for function will need to work on this
+    public void reRender(){
+        spriteBatch.begin();
+        spriteBatch.draw(racer.texture,50,50);
+        this.racer.sprite.draw(spriteBatch);
+        spriteBatch.end();
     }
 
 
